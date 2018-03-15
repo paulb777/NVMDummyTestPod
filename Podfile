@@ -1,6 +1,5 @@
 use_frameworks!
 
-source 'sso://cpdc-internal/spec'
 source 'https://github.com/CocoaPods/Specs.git'
 
 
