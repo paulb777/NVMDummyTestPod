@@ -9,6 +9,9 @@
 #import "NVMMyOCClass.h"
 #import <NVMDummy/NVMDummy-Swift.h>
 
+#import <Protobuf/GPBProtocolBuffers.h>
+
+
 @implementation NVMMyOCClass
 
 + (void)describe {

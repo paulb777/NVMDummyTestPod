@@ -11,9 +11,13 @@
 		AD5BDC271CEAE45D00EE519F /* NVMMyOCClass.h in Headers */ = {isa = PBXBuildFile; fileRef = AD5BDC251CEAE45D00EE519F /* NVMMyOCClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD5BDC281CEAE45D00EE519F /* NVMMyOCClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5BDC261CEAE45D00EE519F /* NVMMyOCClass.m */; };
 		AD5BDC2A1CEAE47400EE519F /* MySWClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5BDC291CEAE47400EE519F /* MySWClass.swift */; };
+		FDAB39CD390EE9EAF0344D97 /* Pods_NVMDummy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2FE33CCACA1A4073782841C /* Pods_NVMDummy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3833FEC55DA6EF02EFFA37DA /* Pods-NVMDummy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NVMDummy.release.xcconfig"; path = "Pods/Target Support Files/Pods-NVMDummy/Pods-NVMDummy.release.xcconfig"; sourceTree = "<group>"; };
+		A2FE33CCACA1A4073782841C /* Pods_NVMDummy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NVMDummy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAE5A01C3C78F5C76B10FFC4 /* Pods-NVMDummy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NVMDummy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NVMDummy/Pods-NVMDummy.debug.xcconfig"; sourceTree = "<group>"; };
 		AD5BDC191CEAE40100EE519F /* NVMDummy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NVMDummy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5BDC1C1CEAE40100EE519F /* NVMDummy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVMDummy.h; sourceTree = "<group>"; };
 		AD5BDC1E1CEAE40100EE519F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -28,18 +32,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDAB39CD390EE9EAF0344D97 /* Pods_NVMDummy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A0EB6892E6E8A1D14B5EFECE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AAE5A01C3C78F5C76B10FFC4 /* Pods-NVMDummy.debug.xcconfig */,
+				3833FEC55DA6EF02EFFA37DA /* Pods-NVMDummy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AD5BDC0F1CEAE40100EE519F = {
 			isa = PBXGroup;
 			children = (
 				AD5BDC2B1CEAFB4000EE519F /* NVMDummy.podspec */,
 				AD5BDC1B1CEAE40100EE519F /* NVMDummy */,
 				AD5BDC1A1CEAE40100EE519F /* Products */,
+				A0EB6892E6E8A1D14B5EFECE /* Pods */,
+				CCBC001114403C2DB02F36DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +79,14 @@
 			path = NVMDummy;
 			sourceTree = "<group>";
 		};
+		CCBC001114403C2DB02F36DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2FE33CCACA1A4073782841C /* Pods_NVMDummy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -82,6 +106,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD5BDC211CEAE40100EE519F /* Build configuration list for PBXNativeTarget "NVMDummy" */;
 			buildPhases = (
+				88AE2B457D5B48664B9A9085 /* [CP] Check Pods Manifest.lock */,
 				AD5BDC141CEAE40100EE519F /* Sources */,
 				AD5BDC151CEAE40100EE519F /* Frameworks */,
 				AD5BDC161CEAE40100EE519F /* Headers */,
@@ -136,6 +161,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		88AE2B457D5B48664B9A9085 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NVMDummy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AD5BDC141CEAE40100EE519F /* Sources */ = {
@@ -242,6 +288,7 @@
 		};
 		AD5BDC221CEAE40100EE519F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAE5A01C3C78F5C76B10FFC4 /* Pods-NVMDummy.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
@@ -255,11 +302,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		AD5BDC231CEAE40100EE519F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3833FEC55DA6EF02EFFA37DA /* Pods-NVMDummy.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
@@ -272,6 +321,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.axl411.NVMDummy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -294,6 +344,7 @@
 				AD5BDC231CEAE40100EE519F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

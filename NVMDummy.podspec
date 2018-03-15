@@ -5,13 +5,18 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
   This project is simply for testing mixing objc and swift code in a pod lib.
   DESC
-  s.homepage         = THE_HOME_PAGE
+  s.homepage         = "http://www.google.com"
   s.author           = { "axl411" => "axl411511@live.com" }
-  s.source           = { :git => THE_GIT_REPO, :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/paulb777/NVMDummyTestPod.git", :tag => s.version.to_s }
   s.license          = { :type => "MIT", :file => "LICENSE" }
   
   s.requires_arc     = true
   s.platform         = :ios, '8.0'
   
   s.source_files     = 'NVMDummy/*.{swift,h,m}'
+  s.dependency        'Protobuf'
+    s.pod_target_xcconfig = {
+    'GCC_PREPROCESSOR_DEFINITIONS' =>
+      'GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS=1 '
+  }
 end
